@@ -39,7 +39,7 @@
   "BlockType": {
     "BlockParticleSetId": "Wood",
     "BlockSoundSetId": "Wood",
-    "CustomModel": "Blocks/BlameJared_Thorium_Chests/BlameJared_ThoriumChests_Thorium_Chest.blockymodel",
+    "CustomModel": "Blocks/BlameJared_Thorium_Chests/BlameJared_ThoriumChests_Thorium_Chest_Model.blockymodel",
     "CustomModelTexture": [
       {
         "Texture": "Blocks/BlameJared_Thorium_Chests/BlameJared_ThoriumChests_Mithril_Chest_Texture.png",
@@ -59,8 +59,6 @@
     "Opacity": "Transparent",
     "ParticleColor": "#63412c",
     "State": {
-      "Id": "container",
-      "Capacity": 63,
       "Definitions": {
         "CloseWindow": {
           "InteractionSoundEventId": "SFX_Chest_Wooden_Close",
@@ -72,6 +70,14 @@
         }
       }
     },
+    "BlockEntity": {
+      "Components": {
+        "ItemContainerBlock": {
+          "Capacity": 63
+        }
+      }
+    },
+    "InteractionHint": "server.interactionHints.openDoor",
     "Supporting": {
       "Up": [
         {
@@ -88,7 +94,6 @@
     },
     "VariantRotation": "NESW",
     "Interactions": {
-      "Primary": "Break_Container",
       "Use": "Open_Container"
     }
   },
@@ -120,5 +125,8 @@
       -15.0
     ]
   },
-  "ItemSoundSetId": "ISS_Blocks_Wood"
+  "ItemSoundSetId": "ISS_Blocks_Wood",
+  "Scale": 0.6,
+  "Variant": true,
+  "MaxStack": 25
 }
