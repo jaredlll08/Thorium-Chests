@@ -59,8 +59,6 @@
     "Opacity": "Transparent",
     "ParticleColor": "#63412c",
     "State": {
-      "Id": "container",
-      "Capacity": 49,
       "Definitions": {
         "CloseWindow": {
           "InteractionSoundEventId": "SFX_Chest_Wooden_Close",
@@ -69,6 +67,13 @@
         "OpenWindow": {
           "InteractionSoundEventId": "SFX_Chest_Wooden_Open",
           "CustomModelAnimation": "Blocks/Animations/Chest/Chest_Open.blockyanim"
+        }
+      }
+    },
+    "BlockEntity": {
+      "Components": {
+        "ItemContainerBlock": {
+          "Capacity": 49
         }
       }
     },
@@ -88,7 +93,6 @@
     },
     "VariantRotation": "NESW",
     "Interactions": {
-      "Primary": "Break_Container",
       "Use": "Open_Container"
     }
   },
@@ -120,5 +124,6 @@
       -15.0
     ]
   },
-  "ItemSoundSetId": "ISS_Blocks_Wood"
+  "ItemSoundSetId": "ISS_Blocks_Wood",
+  "MaxStack": 25
 }
